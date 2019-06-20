@@ -1,0 +1,27 @@
+<div class="navigation-window">
+  <div class="navigation-link siteLogo">KAHMPos</div>
+  <div class="navigation-link nav-link" routerLink="/dashboard">Dashboard</div>
+  <div class="navigation-link nav-link" routerLink="/order">Order</div>
+  <div class="navigation-link nav-link" routerLink="/items">Items</div>
+  <div class="navigation-link nav-link" routerLink="/customers">Customers</div>
+</div>
+<div class="navigation-bar">
+  <div class="navigation-link siteLogo">KAHMPos</div>
+  <div class="dropdown-hamburg" (click)="openCloseSideNavigation()"><i class="fas fa-bars"></i>
+  </div>
+</div>
+<div class="side-navigation" [@open-side-nav]="openClose">
+  <i class="fas fa-times close-icon" (click)="openCloseSideNavigation()"></i>
+  <div class="sid-nav-link" routerLink="/dashboard" (click)="openCloseSideNavigation()"><i
+    class="fas fa-tachometer-alt icons"></i>Dashboard
+  </div>
+  <div class="sid-nav-link" routerLink="/order" (click)="openCloseSideNavigation()"><i
+    class="fas fa-shopping-cart icons"></i>Order
+  </div>
+  <div class="sid-nav-link" routerLink="/items" (click)="openCloseSideNavigation()"><i
+    class="fas fa-cookie-bite icons"></i>Items
+  </div>
+  <div class="sid-nav-link" routerLink="/customers" (click)="openCloseSideNavigation()"><i
+    class="fas fa-user-friends icons"></i>Customers
+  </div>
+</div>

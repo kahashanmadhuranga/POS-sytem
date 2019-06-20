@@ -1,0 +1,15 @@
+.topic {
+  width: 100%;
+  font-size: 18px;
+  cursor: default;
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+.form-control {
+  width: 290px;
+}
+
+.btn {
+  width: 290px;
+}
