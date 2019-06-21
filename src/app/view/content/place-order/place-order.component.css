@@ -1,0 +1,47 @@
+.example-full-width {
+  width: 90%;
+}
+
+.exists-customer {
+  text-align: center;
+}
+
+.table-style {
+  box-shadow: 0 0 12px -5px;
+  width: 96%;
+  margin-left: 2%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.topic {
+  width: 100%;
+  font-size: 18px;
+  cursor: default;
+  text-align: center;
+  padding: 20px 0 10px 0;
+}
+
+tr {
+  cursor: pointer;
+}
+
+th {
+  background-color: #515151;
+  color: white;
+}
+
+tr:hover {
+  background-color: #515151;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .exists-customer {
+    margin: 30px 0 30px 0;
+  }
+
+  .table-style {
+    border-radius: 10px;
+  }
+}

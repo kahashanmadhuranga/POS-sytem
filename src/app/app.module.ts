@@ -15,6 +15,8 @@ import {PlaceOrderComponent} from './view/content/place-order/place-order.compon
 import {MatButtonModule} from '@angular/material/button';
 import {NgxSpinnerModule} from 'ngx-spinner';
 import {LoginComponent} from './view/login/login.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,10 @@ import {LoginComponent} from './view/login/login.component';
     MatFormFieldModule,
     MatInputModule,
     NgxSpinnerModule,
-    MatButtonModule
+    MatButtonModule,
+    MatAutocompleteModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

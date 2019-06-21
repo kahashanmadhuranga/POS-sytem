@@ -1,3 +1,51 @@
-<p>
-  place-order works!
-</p>
+<div class="container">
+  <div class="row">
+    <div style="width: 100%; text-align: center;" class="col-md-6">
+      <div style="width: 96%; margin-left: 2%; box-shadow: 1px 1px 12px -5px; border-radius: 10px;">
+        <div class="topic">Order Form</div>
+        <form>
+          <mat-form-field class="example-full-width">
+            <input type="text" placeholder="Item Name/Code" aria-label="Assignee" matInput [formControl]="myControl"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option.name}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <label for="qty"></label>
+            <input id="qty" type="number" matInput placeholder="qty">
+          </mat-form-field>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-6 exists-customer">
+      <div class="table-style">
+        <div class="topic">Order Details</div>
+        <div class="table-responsive" style="max-height: 355px;">
+          <table class="table">
+            <thead class="black white-text">
+            <tr>
+              <th scope="col">CODE</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+              <th scope="col">QTY</th>
+              <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>I001</td>
+              <td>4GB DDR3 RAM</td>
+              <td>4500</td>
+              <td>3</td>
+              <td><i class="fas fa-trash-alt" style="color: red"></i></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
