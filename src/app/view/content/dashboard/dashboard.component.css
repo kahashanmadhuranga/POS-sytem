@@ -1,0 +1,17 @@
+.notify-window {
+  width: 90%;
+  height: 100px;
+  border-radius: 10px;
+  margin-left: 5%;
+  box-shadow: 1px 1px 12px -5px black;
+  background: linear-gradient(to right, #0A194A, #2c2cc0, #2998C7);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 575px) {
+  .notify-window {
+    margin-top: 20px;
+  }
+}

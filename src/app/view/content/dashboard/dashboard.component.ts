@@ -7,6 +7,9 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  numberOfCustomers = 367;
+  numberOfOrders = 311;
+
   constructor() {
   }
 
