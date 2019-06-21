@@ -13,7 +13,7 @@
   position: absolute;
   left: 25px;
   top: 2px;
-  color: #3BE15C !important;
+  color: white !important;
 }
 
 .navigation-link {
@@ -35,6 +35,7 @@
   height: 43px;
   background-color: #515151 !important;
   box-shadow: 0 0 12px -5px;
+  z-index: 2;
 }
 
 .dropdown-hamburg {

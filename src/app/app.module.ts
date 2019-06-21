@@ -12,6 +12,9 @@ import {CustomersComponent} from './view/content/customers/customers.component';
 import {DashboardComponent} from './view/content/dashboard/dashboard.component';
 import {ItemsComponent} from './view/content/items/items.component';
 import {PlaceOrderComponent} from './view/content/place-order/place-order.component';
+import {MatButtonModule} from '@angular/material/button';
+import {NgxSpinnerModule} from 'ngx-spinner';
+import {LoginComponent} from './view/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +24,17 @@ import {PlaceOrderComponent} from './view/content/place-order/place-order.compon
     CustomersComponent,
     DashboardComponent,
     ItemsComponent,
-    PlaceOrderComponent
+    PlaceOrderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    NgxSpinnerModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

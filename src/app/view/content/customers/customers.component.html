@@ -1,46 +1,110 @@
 <div class="container">
+  <div class="search-box">
+    <mat-form-field class="search-input">
+      <label for="search">
+        <input id="search" matInput placeholder="search customer here">
+      </label>
+    </mat-form-field>
+  </div>
   <div class="row">
-    <div class="col-md-6" style="text-align: center">
-      <div class="topic">New customer</div>
-      <form action="">
+    <div class="col-md-6 new-customer-form">
+      <div class="form-style">
+        <div class="topic">New customer</div>
         <div>
-          <label for="name">
-            <input id="name" placeholder="Enter name" type="text" class="form-control">
-          </label>
+          <form>
+            <mat-form-field class="example-full-width" style="width: 90%">
+              <label for="name">
+                <input id="name" matInput placeholder="Name">
+              </label>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" style="width: 90%">
+              <label for="address">
+                <input id="address" matInput placeholder="Address">
+              </label>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" style="width: 90%">
+              <label for="telephone">
+                <input id="telephone" matInput placeholder="Telephone">
+              </label>
+            </mat-form-field>
+          </form>
+          <button mat-raised-button color="accent"
+                  style="width: 90%; outline: none; margin: 20px 0 10px 0; color: white; background-color: #FEA101">
+            Reset Fields
+          </button>
+          <button mat-raised-button class="save-btn">Save</button>
         </div>
-        <label for="address">
-          <input id="address" placeholder="Enter address" type="text" class="form-control">
-        </label>
-        <label for="telephone">
-          <input id="telephone" placeholder="Enter telephone" type="text" class="form-control">
-        </label>
-      </form>
-      <button class="btn btn-success">save</button>
+      </div>
     </div>
-    <div class="col-md-6">
-      <div class="topic">Exists Customers</div>
-      <div class="table-responsive">
-        <table class="table">
-          <thead class="black white-text">
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Telephone</th>
-            <th scope="col"></th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>C001</td>
-            <td>Hashan Madhuranga</td>
-            <td>Salgas Junction Govinna</td>
-            <td>0778079623</td>
-            <td><i class="fas fa-trash-alt" style="color: red"></i></td>
-          </tr>
-          </tbody>
-        </table>
+    <div class="col-md-6 exists-customer">
+      <div class="table-style">
+        <div class="topic">Exists Customers</div>
+        <div class="table-responsive" style="max-height: 355px;">
+          <table class="table">
+            <thead class="black white-text">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Telephone</th>
+              <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>C001</td>
+              <td>Hashan Madhuranga</td>
+              <td>Salgas Junction Govinna</td>
+              <td>0778079623</td>
+              <td><i class="fas fa-trash-alt" style="color: red"></i></td>
+            </tr>
+            <tr>
+              <td>C001</td>
+              <td>Hashan Madhuranga</td>
+              <td>Salgas Junction Govinna</td>
+              <td>0778079623</td>
+              <td><i class="fas fa-trash-alt" style="color: red"></i></td>
+            </tr>
+            <tr>
+              <td>C001</td>
+              <td>Hashan Madhuranga</td>
+              <td>Salgas Junction Govinna</td>
+              <td>0778079623</td>
+              <td><i class="fas fa-trash-alt" style="color: red"></i></td>
+            </tr>
+            <tr>
+              <td>C001</td>
+              <td>Hashan Madhuranga</td>
+              <td>Salgas Junction Govinna</td>
+              <td>0778079623</td>
+              <td><i class="fas fa-trash-alt" style="color: red"></i></td>
+            </tr>
+            <tr>
+              <td>C001</td>
+              <td>Hashan Madhuranga</td>
+              <td>Salgas Junction Govinna</td>
+              <td>0778079623</td>
+              <td><i class="fas fa-trash-alt" style="color: red"></i></td>
+            </tr>
+            <tr>
+              <td>C001</td>
+              <td>Hashan Madhuranga</td>
+              <td>Salgas Junction Govinna</td>
+              <td>0778079623</td>
+              <td><i class="fas fa-trash-alt" style="color: red"></i></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<ngx-spinner
+  bdOpacity=0.3
+  size="medium"
+  color="#fff"
+  type="triangle-skew-spin"
+  [fullScreen]="false">
+  <p style="color: white"> Loading... </p>
+</ngx-spinner>
