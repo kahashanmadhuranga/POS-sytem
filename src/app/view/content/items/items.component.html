@@ -1,3 +1,67 @@
-<p>
-  items works!
-</p>
+<div class="container">
+  <div class="search-box">
+    <mat-form-field class="search-input">
+      <label for="search">
+        <input id="search" matInput placeholder="search Item Here">
+      </label>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <div class="col-md-6 new-customer-form">
+      <div class="form-style">
+        <div class="topic">New Item</div>
+        <div>
+          <form>
+            <mat-form-field class="example-full-width" style="width: 90%">
+              <label for="description">
+                <input id="description" matInput placeholder="description">
+              </label>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" style="width: 90%">
+              <label for="price">
+                <input type="number" id="price" matInput placeholder="Price">
+              </label>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" style="width: 90%">
+              <label for="qty">
+                <input type="number" id="qty" matInput placeholder="QTY">
+              </label>
+            </mat-form-field>
+          </form>
+          <button mat-raised-button color="accent"
+                  style="width: 90%; outline: none; margin: 20px 0 10px 0; color: white; background-color: #FEA101">
+            Reset Fields
+          </button>
+          <button mat-raised-button class="save-btn">Save</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 exists-customer">
+      <div class="table-style">
+        <div class="topic">Exists Items</div>
+        <div class="table-responsive" style="max-height: 355px;">
+          <table class="table">
+            <thead class="black white-text">
+            <tr>
+              <th scope="col">CODE</th>
+              <th scope="col">Description</th>
+              <th scope="col">Price</th>
+              <th scope="col">QTY</th>
+              <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>I001</td>
+              <td>4GB DDR3 RAM</td>
+              <td>4500</td>
+              <td>3</td>
+              <td><i class="fas fa-trash-alt" style="color: red"></i></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
