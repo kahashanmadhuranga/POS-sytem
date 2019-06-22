@@ -14,26 +14,27 @@
           <form>
             <mat-form-field class="example-full-width" style="width: 90%">
               <label for="description">
-                <input id="description" matInput placeholder="description">
+                <input type="number" #idTxt [value]="id" style="display: none;">
+                <input id="description" #descriptionTxt [value]="description" matInput placeholder="description">
               </label>
             </mat-form-field>
             <mat-form-field class="example-full-width" style="width: 90%">
               <label for="price">
-                <input type="number" id="price" matInput placeholder="Price">
+                <input type="text" #priceTxt [value]="price" id="price" matInput placeholder="Price">
               </label>
             </mat-form-field>
             <mat-form-field class="example-full-width" style="width: 90%">
               <label for="qty">
-                <input type="number" id="qty" matInput placeholder="QTY">
+                <input type="text" #qtyTxt [value]="qty" id="qty" matInput placeholder="QTY">
               </label>
             </mat-form-field>
           </form>
-          <button mat-raised-button color="accent"
-                  style="width: 90%; outline: none; margin: 20px 0 10px 0; color: white; background-color: #FEA101"
-                  (click)="updateItem()">
+          <button mat-raised-button color="accent" (click)="reset()">
             Reset Fields
           </button>
-          <button (click)="saveItem()" mat-raised-button class="save-btn">Save</button>
+          <button (click)="saveItem(idTxt.value, descriptionTxt.value, priceTxt.value, qtyTxt.value)" mat-raised-button
+                  class="save-btn">Save
+          </button>
         </div>
       </div>
     </div>
@@ -57,7 +58,7 @@
               <td>{{item.description}}</td>
               <td>{{item.price}}</td>
               <td>{{item.qty}}</td>
-              <td><i class="fas fa-trash-alt" (click)="deleteItem()" style="color: red"></i></td>
+              <td><i class="fas fa-trash-alt" (click)="deleteItem(item.id)" style="color: red"></i></td>
             </tr>
             </tbody>
           </table>

@@ -11,28 +11,35 @@
       <div class="form-style">
         <div class="topic">New customer</div>
         <div>
-          <form>
+          <form #cusForm='ngForm'>
             <mat-form-field class="example-full-width" style="width: 90%">
               <label for="name">
-                <input id="name" matInput placeholder="Name">
+                <input #idTxt style="display: none;" [value]="id">
+                <input #nameTxt id="name" matInput placeholder="Name" [value]="name"
+                       required>
               </label>
             </mat-form-field>
             <mat-form-field class="example-full-width" style="width: 90%">
               <label for="address">
-                <input id="address" matInput placeholder="Address">
+                <input id="address" matInput placeholder="Address" #addressTxt
+                       [value]="address"
+                       required>
               </label>
             </mat-form-field>
             <mat-form-field class="example-full-width" style="width: 90%">
               <label for="telephone">
-                <input id="telephone" matInput placeholder="Telephone">
+                <input id="telephone" matInput placeholder="Telephone" #telephoneTxt [value]="telephone"
+                       required>
               </label>
             </mat-form-field>
+            <button (click)="reset()" mat-raised-button color="accent"
+                    style="width: 90%; outline: none; margin: 20px 0 10px 0; color: white; background-color: #FEA101">
+              Reset Fields
+            </button>
           </form>
-          <button (click)="updateCustomer()" mat-raised-button color="accent"
-                  style="width: 90%; outline: none; margin: 20px 0 10px 0; color: white; background-color: #FEA101">
-            Reset Fields
+          <button (click)="saveCustomer(idTxt.value, nameTxt.value, addressTxt.value, telephoneTxt.value)" type="submit"
+                  mat-raised-button class="save-btn">Save
           </button>
-          <button (click)="saveCustomer()" mat-raised-button class="save-btn">Save</button>
         </div>
       </div>
     </div>
@@ -51,12 +58,12 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let customer of customers">
+            <tr *ngFor="let customer of customers" (click)="selectCustomer(customer)">
               <td>{{customer.id}}</td>
               <td>{{customer.name}}</td>
               <td>{{customer.address}}</td>
               <td>{{customer.telephone}}</td>
-              <td><i class="fas fa-trash-alt" style="color: red" (click)="deleteCustomer()"></i></td>
+              <td><i class="fas fa-trash-alt" style="color: red" (click)="deleteCustomer(customer.id)"></i></td>
             </tr>
             </tbody>
           </table>
