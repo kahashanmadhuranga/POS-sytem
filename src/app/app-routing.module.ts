@@ -5,6 +5,7 @@ import {CustomersComponent} from './view/content/customers/customers.component';
 import {ItemsComponent} from './view/content/items/items.component';
 import {PlaceOrderComponent} from './view/content/place-order/place-order.component';
 import {DashboardComponent} from './view/content/dashboard/dashboard.component';
+import {LoginComponent} from './view/login/login.component';
 
 const routes: Routes = [
   {path: 'navigation', component: SideNavigationComponent},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'items', component: ItemsComponent},
   {path: 'customers', component: CustomersComponent},
-  {path: 'order', component: PlaceOrderComponent}
+  {path: 'order', component: PlaceOrderComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

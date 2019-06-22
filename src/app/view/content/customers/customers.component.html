@@ -28,11 +28,11 @@
               </label>
             </mat-form-field>
           </form>
-          <button mat-raised-button color="accent"
+          <button (click)="updateCustomer()" mat-raised-button color="accent"
                   style="width: 90%; outline: none; margin: 20px 0 10px 0; color: white; background-color: #FEA101">
             Reset Fields
           </button>
-          <button mat-raised-button class="save-btn">Save</button>
+          <button (click)="saveCustomer()" mat-raised-button class="save-btn">Save</button>
         </div>
       </div>
     </div>
@@ -51,12 +51,12 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <td>C001</td>
-              <td>Hashan Madhuranga</td>
-              <td>Salgas Junction Govinna</td>
-              <td>0778079623</td>
-              <td><i class="fas fa-trash-alt" style="color: red"></i></td>
+            <tr *ngFor="let customer of customers">
+              <td>{{customer.id}}</td>
+              <td>{{customer.name}}</td>
+              <td>{{customer.address}}</td>
+              <td>{{customer.telephone}}</td>
+              <td><i class="fas fa-trash-alt" style="color: red" (click)="deleteCustomer()"></i></td>
             </tr>
             </tbody>
           </table>
