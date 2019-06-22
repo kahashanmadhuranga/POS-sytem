@@ -29,10 +29,11 @@
             </mat-form-field>
           </form>
           <button mat-raised-button color="accent"
-                  style="width: 90%; outline: none; margin: 20px 0 10px 0; color: white; background-color: #FEA101">
+                  style="width: 90%; outline: none; margin: 20px 0 10px 0; color: white; background-color: #FEA101"
+                  (click)="updateItem()">
             Reset Fields
           </button>
-          <button mat-raised-button class="save-btn">Save</button>
+          <button (click)="saveItem()" mat-raised-button class="save-btn">Save</button>
         </div>
       </div>
     </div>
@@ -51,12 +52,12 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-              <td>I001</td>
-              <td>4GB DDR3 RAM</td>
-              <td>4500</td>
-              <td>3</td>
-              <td><i class="fas fa-trash-alt" style="color: red"></i></td>
+            <tr *ngFor="let item of allItems">
+              <td>{{item.id}}</td>
+              <td>{{item.description}}</td>
+              <td>{{item.price}}</td>
+              <td>{{item.qty}}</td>
+              <td><i class="fas fa-trash-alt" (click)="deleteItem()" style="color: red"></i></td>
             </tr>
             </tbody>
           </table>

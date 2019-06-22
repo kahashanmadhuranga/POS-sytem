@@ -25,8 +25,6 @@ export class CustomerService {
   }
 
   deleteCustomer(id: number): Observable<boolean> {
-    // const httpParm = new HttpParams();
-    // httpParm.append('id', id.toString());
-    return this.http.post<boolean>(environment.api + 'deleteCustomer', {});
+    return this.http.delete<boolean>(environment.api + 'customer?id=' + id);
   }
 }

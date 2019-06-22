@@ -40,7 +40,7 @@ export class CustomersComponent implements OnInit {
   }
 
   deleteCustomer() {
-    this.customerService.deleteCustomer(3)
+    this.customerService.deleteCustomer(4)
       .subscribe((isDeleted: boolean) => {
         alert(isDeleted);
       });
